@@ -1,0 +1,73 @@
+{
+  "functional_groups": [
+    {
+      "name": "amino",
+      "formula": "-NH2",
+      "smiles": "N",
+      "description": "Amine group - strong affinity for CO2 via acid-base / dipole-quadrupole interaction"
+    },
+    {
+      "name": "hydroxyl",
+      "formula": "-OH",
+      "smiles": "O",
+      "description": "Hydroxyl group - forms hydrogen bonds, increases framework polarity for CO2"
+    },
+    {
+      "name": "fluoro",
+      "formula": "-F",
+      "smiles": "F",
+      "description": "Fluoro group - enhances CO2 affinity and moisture stability without reducing pore size significantly"
+    },
+    {
+      "name": "methyl",
+      "formula": "-CH3",
+      "smiles": "C",
+      "description": "Methyl group - modulates hydrophobicity and pore volume"
+    },
+    {
+      "name": "carboxyl",
+      "formula": "-COOH",
+      "smiles": "C(=O)O",
+      "description": "Carboxylic acid - polar coordinating group"
+    },
+    {
+      "name": "nitro",
+      "formula": "-NO2",
+      "smiles": "[N+](=O)[O-]",
+      "description": "Nitro group - strong electron withdrawing group with high dipole moment"
+    },
+    {
+      "name": "methoxy",
+      "formula": "-OCH3",
+      "smiles": "OC",
+      "description": "Methoxy group - electron donating ether functionality"
+    },
+    {
+      "name": "chloro",
+      "formula": "-Cl",
+      "smiles": "Cl",
+      "description": "Chloro group - halogen modification for tuned pore environment"
+    },
+    {
+      "name": "cyano",
+      "formula": "-CN",
+      "smiles": "C#N",
+      "description": "Cyano group - strong dipole moment enhancing electrostatic interaction with CO2"
+    },
+    {
+      "name": "trifluoromethyl",
+      "formula": "-CF3",
+      "smiles": "C(F)(F)F",
+      "description": "Trifluoromethyl group - highly fluorinated hydrophobic group"
+    }
+  ],
+  "scaffold": {
+    "name": "MOF-5",
+    "topology": "pcu",
+    "metal_node": "Zn4O",
+    "organic_linker": "1,4-benzenedicarboxylate (BDC)",
+    "linker_core_smiles": "c1c(C(=O)[O-])cc(C(=O)[O-])cc1",
+    "linker_neutral_smiles": "O=C(O)c1ccc(C(=O)O)cc1",
+    "modifiable_positions": ["2", "3", "5", "6"]
+  }
+}

@@ -1,0 +1,41 @@
+# Configuration Settings for Senior Project Pipeline
+
+project:
+  name: "Greenhouse Gas Adsorbent Discovery Pipeline"
+  version: "0.1.0"
+  target_adsorption: "CO2/CH4"
+  temperature_k: 298.15
+  pressure_bar: 1.0
+  gas_mixture:
+    CO2: 0.50
+    CH4: 0.50
+
+tools:
+  wsl_enabled: true
+  wsl_distro: "Ubuntu"
+  
+  zeo:
+    executable_path: "network" # available in PATH within WSL (/usr/local/bin/network)
+    probe_radius: 1.2          # Helium probe radius for PSD/surface area
+    pld_cutoff_angstrom: 3.8   # Kinetic diameter of CH4 is ~3.8 A (PLD >= 3.8 A required)
+  
+  raspa:
+    dir: "/opt/tools/raspa2"   # $RASPA_DIR in WSL
+    executable_path: "simulate"
+    forcefield: "GenericMOFs"  # or TraPPE / UFF
+    fast_cycles:
+      initialization: 1000
+      simulation: 2000
+    production_cycles:
+      initialization: 10000
+      simulation: 50000
+
+llm:
+  provider: "gemini"           # options: gemini, openai, anthropic, mock
+  model: "gemini-1.5-flash"
+  temperature: 0.2
+  max_tokens: 2048
+
+database:
+  success_file: "data/database/success_candidates.json"
+  failure_file: "data/database/failure_log.json"

@@ -1,0 +1,41 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Logs
+runtime.log
+*.log
+
+# Generated Pipeline Data and Structures (Do not track generated models/results)
+data/generated_cifs/*
+!data/generated_cifs/.gitkeep
+data/database/*.json
+!data/database/.gitkeep
+
+# Simulation Engine outputs & temporary artifacts (Zeo++ / RASPA2)
+*.res
+*.vol
+*.sa
+*.block
+*.vis
+Movies/
+VTK/
+Restart/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

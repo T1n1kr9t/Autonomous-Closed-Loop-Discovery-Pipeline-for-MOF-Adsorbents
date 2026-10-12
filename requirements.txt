@@ -1,0 +1,20 @@
+# Senior Project Multi-Agent Closed-Loop Pipeline Dependencies
+# Recommended Python version: 3.10 - 3.12 (WSL2 Ubuntu recommended for physics engines)
+
+numpy>=1.24.0,<2.0.0
+scipy>=1.10.0
+pydantic>=2.5.0
+pyyaml>=6.0.1
+requests>=2.31.0
+tqdm>=4.66.0
+pytest>=8.0.0
+
+# Chemistry and Materials Informatics
+rdkit>=2023.9.1
+pymatgen>=2023.12.0
+ase>=3.22.1
+pormake>=0.1.0
+
+# Optional LLM SDKs
+google-generativeai>=0.8.0
+python-dotenv>=1.0.0
